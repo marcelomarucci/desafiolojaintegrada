@@ -1,0 +1,19 @@
+{
+  "name": "desafio-loja-integrada",
+  "version": "1.0.0",
+  "description": "Desafio Loja Integrada",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation"
+  ],
+  "author": "Marcelo Marucci",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^9.2.0"
+  }
+}
