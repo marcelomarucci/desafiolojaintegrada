@@ -1,7 +1,12 @@
 /// <reference types="Cypress" />
 
 describe('Pesquisar Produto', () => {
-    before(() => cy.login())
+    before(() => {
+        
+        cy.login()
+        cy.clearCookies()
+    
+    })
 
     it('successfuly', () => {
 

@@ -4,6 +4,7 @@ describe('Selecionar Produto', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies()
         cy.pesquisarProduto()
     })
 

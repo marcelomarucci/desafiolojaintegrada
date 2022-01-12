@@ -4,6 +4,7 @@ describe('Selecionar Quantidade', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies()
         cy.pesquisarProduto()
         cy.selecionarProduto()
         cy.adicionarProdutoCarrinho()

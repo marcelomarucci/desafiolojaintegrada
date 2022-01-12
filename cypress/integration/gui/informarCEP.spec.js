@@ -4,6 +4,7 @@ describe('Informar CEP', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies()
         cy.pesquisarProduto()
         cy.selecionarProduto()
         cy.adicionarProdutoCarrinho()

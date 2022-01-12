@@ -4,6 +4,7 @@ describe('Adicionar Cupom', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies(500)
         cy.pesquisarProduto()
         cy.selecionarProduto()
         cy.adicionarProdutoCarrinho()

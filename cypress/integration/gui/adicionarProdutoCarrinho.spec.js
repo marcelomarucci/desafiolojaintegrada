@@ -4,6 +4,7 @@ describe('Incluir Pedido', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies(500)
         cy.pesquisarProduto()
         cy.selecionarProduto()
     })

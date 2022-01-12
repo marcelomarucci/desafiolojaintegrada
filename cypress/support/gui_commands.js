@@ -58,7 +58,7 @@ Cypress.Commands.add('finalizarCompra1', () => {
     })
 
 Cypress.Commands.add('selecionarEndereco', () => {
-    cy.get("#idEnderecoPrincipal4").check()
+    cy.contains("Santa Paula ").click()
     })
 
 Cypress.Commands.add('selecionarformadePagamento', () => {
@@ -68,3 +68,10 @@ Cypress.Commands.add('selecionarformadePagamento', () => {
 Cypress.Commands.add('IncluirPedidocomCupom', () => {
     cy.get("#finalizarCompra").click().wait(100)
     })
+
+Cypress.Commands.add('informardadosLogin', () => {
+    cy.get("#id_email_login").type(Cypress.env('user_name'))
+    cy.get('.submit-email').click().wait(200)
+    cy.get("#id_senha_login").type(Cypress.env('user_password'))
+    cy.get("#id_botao_login").click()
+})

@@ -4,6 +4,7 @@ describe('Selecionar Endereço', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies()
         cy.pesquisarProduto()
         cy.selecionarProduto()
         cy.adicionarProdutoCarrinho()
@@ -12,6 +13,7 @@ describe('Selecionar Endereço', () => {
         cy.selecionarFrete()
         cy.adicionarCupom()
         cy.finalizarCompra1()
+        cy.informardadosLogin()
 
     })
 
@@ -19,6 +21,6 @@ describe('Selecionar Endereço', () => {
 
         cy.selecionarEndereco()
   
-        cy.get('.accordion-inner').should('be.visible')
+        cy.get('.endereco-principal').should('be.checked').and('have.value', '46162909')
     })
 })

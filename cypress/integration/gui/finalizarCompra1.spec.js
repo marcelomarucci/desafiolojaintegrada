@@ -4,6 +4,7 @@ describe('Finalizar Compra 1', () => {
 
     before(() => {
         cy.login()
+        cy.clearCookies(500)
         cy.pesquisarProduto()
         cy.selecionarProduto()
         cy.adicionarProdutoCarrinho()
@@ -11,6 +12,13 @@ describe('Finalizar Compra 1', () => {
         cy.informarCEP()
         cy.selecionarFrete()
         cy.adicionarCupom()
+    })
+
+    after(() => {
+
+        cy.informardadosLogin()
+        cy.get("#formasPagamento").should('exist')
+
     })
 
     it('successfuly', () => {
